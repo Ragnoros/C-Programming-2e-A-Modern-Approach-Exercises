@@ -5,19 +5,13 @@
 
 int main(void)
 {
-    int height, length, width, volume, weight;
+    int height = 12, length = 10, width = 8, volume;
 
-    printf("Enter Height of the Box: ");
-    scanf("%d", &height);
-    printf("Enter Length of the Box: ");
-    scanf("%d", &length);
-    printf("Enter Width of the Box: ");
-    scanf("%d", &width);
     volume = height * length * width;
-    weight = (volume + INCHES_PER_POUND - 1) / 166;
+    
 
     printf("Volume (cubic inches): %d\n", volume);
-    printf("Dimensional weight (pounds): %d\n", weight);
+    printf("Dimensional weight (pounds): %d\n", (volume + INCHES_PER_POUND - 1) / 166);
 
     return 0;
 

@@ -14,9 +14,12 @@ int main(void)
 
     rounded_amount = dollar_amount;
     twenty = rounded_amount / 20;
-    ten = (rounded_amount - (20 * twenty )) / 10;
-    five = (((rounded_amount - (20 * twenty ))) - (10 * ten)) / 5;
-    one = ((((rounded_amount - (20 * twenty ))) - (10 * ten) )- (5 * five)) / 1;
+    rounded_amount = rounded_amount - (20 * twenty );
+    ten = rounded_amount / 10;
+    rounded_amount = rounded_amount - (10 * ten);
+    five = rounded_amount / 5;
+    rounded_amount = rounded_amount - (5 * five);
+    one = rounded_amount / 1;
 
     printf("# of Twenty Bills: %d\n# of Ten Bills: %d\n# of Five Bills: %d\n# of One Bills: %d", twenty, ten, five, one);
 

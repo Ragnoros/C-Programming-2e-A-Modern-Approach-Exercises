@@ -6,4 +6,5 @@ I am using this project to learn the C programming language and practice its con
 
 ## Structure
 
+- **test.c**: General Purpose testing file
 - **/chapter_02/**: Solutions for Chapter 2

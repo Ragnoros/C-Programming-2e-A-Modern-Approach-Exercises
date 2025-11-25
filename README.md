@@ -8,3 +8,4 @@ I am using this project to learn the C programming language and practice its con
 
 - **test.c**: General Purpose testing file
 - **/chapter_02/**: Solutions for Chapter 2
+- **/chapter_03/**: Solutions for Chapter 3

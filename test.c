@@ -6,12 +6,10 @@
 int main(void)
 {
 
-    int i;
-    float y;
-    float x;
+    int i = 7, j, k;
+    j = 3 + --i * 2;
 
-    scanf("%f%d%f", &x, &i, &y);
-    printf("%.1f\n%d\n%.1f", x, i, y);
+    printf("%d %d \n", i, j);
 
     return 0;
 }

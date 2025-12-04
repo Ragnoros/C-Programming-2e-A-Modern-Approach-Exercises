@@ -2,14 +2,27 @@
 // Expect this code to change a lot.
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int main(void)
 {
 
-    int i = 7, j, k;
-    j = 3 + --i * 2;
-
-    printf("%d %d \n", i, j);
+    int code = 1;
+    switch (code)
+    {
+    case 229:
+        printf("Albany");
+        break;
+    case 404:
+    case 470:
+        printf("Atlanta");
+        break;
+    case 478:
+        printf("Macon");
+        break;
+    default:
+        printf("Area code not recognized");
+    }
 
     return 0;
 }

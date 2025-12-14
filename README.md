@@ -13,3 +13,4 @@ I limit myself to what is currently being taught. An example would be the condit
 - **/chapter_03/**: Solutions for Chapter 3
 - **/chapter_04/**: Solutions for Chapter 4
 - **/chapter_05/**: Solutions for Chapter 5
+- **/chapter_06/**: Solutions for Chapter 6

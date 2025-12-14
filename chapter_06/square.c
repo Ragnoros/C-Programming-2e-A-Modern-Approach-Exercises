@@ -18,5 +18,12 @@ int main(void)
         i--;
     }
 
+    for (int i = 5; i > 0; i--)
+    {
+        printf("%d\t%d\n", num, num * num);
+
+        num++;
+    }
+
     return 0;
 }

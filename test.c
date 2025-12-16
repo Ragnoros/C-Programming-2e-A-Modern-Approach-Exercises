@@ -7,22 +7,14 @@
 int main(void)
 {
 
-    int code = 1;
-    switch (code)
+    int n = 2;
+
+    if (n % 2 == 0)
     {
-    case 229:
-        printf("Albany");
-        break;
-    case 404:
-    case 470:
-        printf("Atlanta");
-        break;
-    case 478:
-        printf("Macon");
-        break;
-    default:
-        printf("Area code not recognized");
+        printf("n is even\n");
     }
 
     return 0;
 }
+
+// 1 4 9 15 24

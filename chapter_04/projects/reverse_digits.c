@@ -5,18 +5,20 @@
 int main(void)
 {
 
-    int num;
-    int digit1, digit2, digit3;
+    int num, num_reverse = 0;
 
-    printf("First method - enter a three-digit number: ");
+    printf("Enter a number: ");
     scanf("%d", &num);
 
-    printf("%d%d%d\n", num % 10, (num / 10) % 10, num / 100);
+    do
+    {
 
-    printf("Second method - enter a three-digit number: ");
-    scanf("%1d %1d %1d", &digit1, &digit2, &digit3);
+        num_reverse = (num_reverse * 10) + (num % 10);
+        num /= 10;
 
-    printf("%d%d%d", digit3, digit2, digit1);
+    } while (num);
+
+    printf("%d", num_reverse);
 
     return 0;
 }

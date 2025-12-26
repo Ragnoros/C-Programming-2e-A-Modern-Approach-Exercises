@@ -1,4 +1,5 @@
 // Write a program that asks the user to enter a two-digit number, then prints the number with its digits reversed.
+// Chapter 6 update: Re-write using a do while loop so that it accounts for any number of values.
 
 #include <stdio.h>
 

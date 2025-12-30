@@ -4,7 +4,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
 
   int days, daystart;
 
@@ -14,11 +15,14 @@ int main(void) {
   printf("\nPlease enter the starting day (1=Sun 7=Sat): ");
   scanf("%d", &daystart);
 
-  if (days >= 1 && days <= 31 && daystart >= 1 && daystart <= 7) {
-    for (int i = 1; i <= days; i++) {
+  if (days >= 1 && days <= 31 && daystart >= 1 && daystart <= 7)
+  {
+    for (int i = 1; i <= days; i++)
+    {
 
       printf("%.2d ", i);
-      if (i % 7 == 0) {
+      if (i % 7 == 0)
+      {
         printf("\n");
       }
     }

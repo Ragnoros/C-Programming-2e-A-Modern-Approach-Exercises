@@ -6,7 +6,7 @@
 int main(void)
 {
 
-    int month, day, year, date_conv, earliest = 0;
+    int month, day, year, date_conv = 0, earliest = 0;
     bool run = true;
 
     while (run)
@@ -27,15 +27,14 @@ int main(void)
         else
         {
             date_conv = (year * 10000) + (month * 100) + day;
-        }
-
-        if (date_conv < earliest)
-        {
-            earliest = date_conv;
+            if (date_conv < earliest)
+            {
+                earliest = date_conv;
+            }
         }
     }
 
-    printf("The earliest date is: %d", earliest);
+    printf("The earliest date is: %d\n", earliest);
 
     return 0;
 }

@@ -9,17 +9,19 @@
 int main(void)
 {
 
-    float n;
-    float expression = 1.00f;
+    float term = 1.0f;
     float factoral = 1.00f;
+    float epsilon;
+    float expression = 1.00f;
 
-    printf("Please enter a number: ");
-    scanf("%f", &n);
+    printf("Please enter epsilon: ");
+    scanf("%f", &epsilon);
 
-    for (int i = 1; factoral > n; i++)
+    for (int i = 1; term >= epsilon; i++)
     {
-        factoral /= i;
-        expression += 1.00f / factoral;
+        factoral *= i;
+        term = 1.0f / factoral;
+        expression += term;
     }
 
     printf("%f", expression);

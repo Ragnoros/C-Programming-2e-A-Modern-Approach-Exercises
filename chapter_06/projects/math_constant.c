@@ -9,16 +9,16 @@
 int main(void)
 {
 
-    int n;
+    float n;
     float expression = 1.00f;
     float factoral = 1.00f;
 
     printf("Please enter a number: ");
-    scanf("%d", &n);
+    scanf("%f", &n);
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; factoral > n; i++)
     {
-        factoral *= i;
+        factoral /= i;
         expression += 1.00f / factoral;
     }
 

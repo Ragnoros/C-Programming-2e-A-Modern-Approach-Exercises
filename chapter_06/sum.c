@@ -5,15 +5,15 @@
 int main(void)
 {
 
-    int num, sum = 0;
+    long num, sum = 0;
 
     while (num != 0)
     {
         printf("Please enter a number: ");
-        scanf("%d", &num);
+        scanf("%ld", &num);
 
         sum += num;
-        printf("Your current sum: %d\n", sum);
+        printf("Your current sum: %ld\n", sum);
     }
 
     return 0;

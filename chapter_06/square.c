@@ -1,28 +1,31 @@
 // Write a program that prints a table of squares based on an input from the user
+// Chapter 07 updates: Modify the program using different data types and implementing loop conditions using getchar()
+
 #include <stdio.h>
 
 int main(void)
 {
 
-    int num;
-    int i = 5;
+    long num;
+    char loopCount = 0;
 
     printf("Please Enter a number: ");
-    scanf("%d", &num);
+    scanf("%ld", &num);
 
-    while (i > 0)
+    for (long i = 0; i > 0; i--)
     {
-        printf("%d\t%d\n", num, num * num);
+        if (loopCount == 24)
+        {
+            printf("Press Enter to continue...\n");
+            while (getchar() != '\n')
+                ;
+            loopCount = 0;
+        }
+
+        printf("%ld\t%ld\n", num, num * num);
 
         num++;
-        i--;
-    }
-
-    for (int i = 5; i > 0; i--)
-    {
-        printf("%d\t%d\n", num, num * num);
-
-        num++;
+        loopCount++;
     }
 
     return 0;

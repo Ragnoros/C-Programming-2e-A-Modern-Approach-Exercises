@@ -12,11 +12,13 @@ int main(void)
     printf("Please Enter a number: ");
     scanf("%ld", &num);
 
-    for (long i = 0; i > 0; i--)
+    for (long i = num; i > 0; i--)
     {
         if (loopCount == 24)
         {
+
             printf("Press Enter to continue...\n");
+            getchar();
             while (getchar() != '\n')
                 ;
             loopCount = 0;

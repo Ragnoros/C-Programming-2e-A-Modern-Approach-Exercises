@@ -9,61 +9,66 @@ int main(void)
     int phone = 0;
     char ch;
     bool run = true;
-    while (run)
+    printf("Enter phone number: ");
+    do
     {
         ch = getchar();
         ch = toupper(ch);
 
         switch (ch)
         {
+        case '\n':
+            run = false;
+            break;
+        case '-':
+            putchar('-');
+            break;
         case 'A':
         case 'B':
         case 'C':
-            phone = (phone * 10) + 2;
+            putchar('2');
             break;
         case 'D':
         case 'E':
         case 'F':
-            printf("test");
-            phone = (phone * 10) + 3;
+            putchar('3');
             break;
         case 'G':
         case 'H':
         case 'I':
-            phone = (phone * 10) + 4;
+            putchar('4');
             break;
         case 'J':
         case 'K':
         case 'L':
-            phone = (phone * 10) + 5;
+            putchar('5');
             break;
         case 'M':
         case 'N':
         case 'O':
-            phone = (phone * 10) + 6;
+            putchar('6');
             break;
         case 'P':
         case 'R':
         case 'S':
-            phone = (phone * 10) + 7;
+            putchar('7');
             break;
         case 'T':
         case 'U':
         case 'V':
-            phone = (phone * 10) + 8;
+            putchar('8');
             break;
         case 'W':
         case 'X':
         case 'Y':
-            phone = (phone * 10) + 9;
+            putchar('9');
             break;
-             };
-
-        if (ch == ' ')
-        {
+        default:
+            putchar(ch);
             break;
         }
-    }
-    printf("%d", phone);
+
+    } while (run);
+    printf("\n");
     return 0;
 }

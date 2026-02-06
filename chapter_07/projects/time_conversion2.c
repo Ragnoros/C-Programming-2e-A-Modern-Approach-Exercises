@@ -1,17 +1,27 @@
 // Re-Write the time conversion program from chapter 05 so that it also accepts pm, am, p, a in either lowercase or uppercase. Turn 12 hour into 24 hour this time.
 
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void)
 {
 
-    char daypart = 0;
+    char daypart1, daypart2;
     int hour, min;
 
-    printf("Please Enter a 24 hour time format time (23:59pm): ");
-    scanf("%2d : %2d %c", &hour, &min, &daypart);
+    printf("Please Enter a 12 hour time format time (1:59pm): ");
+    scanf("%2d : %2d %c%c", &hour, &min, &daypart1, &daypart2);
 
-       printf("The 12 hour conversion is: %d:%d%c", hour, min, daypart);
+    if (toupper(daypart1) == 'P' && hour != 12)
+    {
+        hour += 12;
+    }
+    else if (hour == 12 && toupper(daypart1) == 'A')
+    {
+        hour = 0;
+    }
+
+    printf("%.2d:%.2d%c%c", hour, min, daypart1, daypart2);
 
     return 0;
 }

@@ -5,14 +5,13 @@
 
 int main(void)
 {
-    char daypart, hour, minute;
+    char daypart1, daypart2;
+    short hour, minute;
 
     printf("Please enter a time ( 23:59pm ): ");
-    scanf("%2d : %2d %c", &hour, &minute, &daypart);
+    scanf("%2hi : %2hi %c%c", &hour, &minute, &daypart1, &daypart2);
 
-    daypart = toupper(daypart);
-
-    printf("%d:%d%c", hour, minute, daypart);
+    printf("%hi:%hi%c%c", hour, minute, daypart1, daypart2);
 
     return 0;
 }

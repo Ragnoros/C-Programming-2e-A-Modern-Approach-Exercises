@@ -8,7 +8,7 @@
 int main(void)
 {
 
-    char name, last_name, initial;
+    char name, initial;
     short count = 0;
     bool space_check = false;
 

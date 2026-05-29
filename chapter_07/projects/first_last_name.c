@@ -22,14 +22,14 @@ int main(void)
         if (name == ' ')
         {
             space_check = true;
+            continue;
         }
         if (space_check)
         {
-            last_name = getchar();
-            break;
+            putchar(name);
         }
     }
-    printf("%c, %c.", last_name, initial);
+    printf(", %c.", initial);
 
     return 0;
 }

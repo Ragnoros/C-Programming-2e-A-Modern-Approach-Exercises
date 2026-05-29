@@ -3,18 +3,33 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 int main(void)
 {
 
-    int last_name, initial;
+    char name, last_name, initial;
+    short count = 0;
+    bool space_check = false;
 
-    while (getchar() != EOF && getchar() != '\n')
+    while ((name = getchar()) != EOF && name != '\n')
     {
-        switch (getchar())
+        ++count;
+        if (count == 1)
         {
+            initial = name;
+        }
+        if (name == ' ')
+        {
+            space_check = true;
+        }
+        if (space_check)
+        {
+            last_name = getchar();
+            break;
         }
     }
+    printf("%c, %c.", last_name, initial);
 
     return 0;
 }
